@@ -21,11 +21,12 @@
 }
 
 .snacks {
-  height: 10vh;
+  height: 15vh;
   display: flex;
   flex-wrap: wrap;
   margin: 2% auto;
   gap: 0 2%;
+  row-gap: 30%;
 }
 
 .snack {

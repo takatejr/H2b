@@ -23,7 +23,6 @@ export class SearchBarComponent implements OnInit {
   placeholder = this.searchService.placeholder.value
 
   selectValue(value: string) {
-    // this.route.navigateByUrl(`/photos/${value}`, { replaceUrl: true })
     this.redirectTo(value)
     this.searchService.placeholder.next(value)
 
