@@ -3,7 +3,7 @@
   class="search-bar"
   [ngClass]="placeholder !== '' ? 'moreCircle' : 'circle'"
 >
-<div class="home" routerLink="/" class="home">
+<a href="/" class="home" (click)="setPlaceholder()" class="home" >
   <svg
     version="1.1"
     id="_x31_0"
@@ -24,7 +24,7 @@
       />
     </g>
   </svg>
-</div>
+</a>
 
   <mat-form-field class="form-container" type="button">
     <div class="input_with_icon">

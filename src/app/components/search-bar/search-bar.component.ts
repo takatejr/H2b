@@ -25,7 +25,10 @@ export class SearchBarComponent implements OnInit {
   selectValue(value: string) {
     this.redirectTo(value)
     this.searchService.placeholder.next(value)
+  }
 
+  setPlaceholder() {
+    this.searchService.setPlaceholder()
   }
 
   redirectTo(url:string){

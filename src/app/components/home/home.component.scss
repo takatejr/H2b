@@ -1,39 +1,38 @@
 .background {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url(../../../assets/bgi.jpg) center bottom no-repeat;
-  }
-  
-  .grid {
-    display: grid;
-  }
-  
-  .title {
-    width: 70vw;
-    height: 15vh;
-    margin: auto;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-  }
-  
-  .describe {
-    height: 7vh;
-    width: 70vw;
-    margin: 1% auto 0 auto;
-    color: white;
-  }
-  
-  .freely-usable {
-    color: hsla(0, 0%, 100%, 0.8);
-  }
-  
-  .trending {
-    font-weight: 500;
-  }
-  
-  .trending > span {
-    font-weight: normal;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../../assets/bgi.jpg) center bottom no-repeat;
+}
+
+.grid {
+  display: grid;
+}
+
+.title {
+  width: 70vw;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.describe {
+  height: 7vh;
+  width: 70vw;
+  margin: 1% auto 0 auto;
+  color: white;
+}
+
+.freely-usable {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+.trending {
+  font-weight: 500;
+}
+
+.trending > span {
+  font-weight: normal;
+}

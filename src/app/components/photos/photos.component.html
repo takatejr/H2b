@@ -1,7 +1,7 @@
 <app-search-bar class="search-bar"></app-search-bar>
 <h2 class="title">{{ title | async }}</h2>
 <div class="snacks title">
-  <div *ngFor="let snack of tags">
+  <div class="container-snacks" *ngFor="let snack of tags">
     <span class="snack">{{ snack }}</span>
   </div>
 </div>

@@ -8,12 +8,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class SearchBarService {
 
   placeholder = new BehaviorSubject('')
+  standardPlaceholder = new BehaviorSubject("Search free high-resolution photos")
+
 
   constructor(private route: Router, private router: ActivatedRoute) {
-    this.placeholderValue()
+    this.handlePlaceholder()
   }
 
-  placeholderValue() {
-   this.placeholder.next(this.route.url.split('/').pop())
+  setPlaceholder() {
+    this.placeholder.next(this.standardPlaceholder.value)
+  }
+
+  handlePlaceholder() {
+    const title = this.route.url.split('/').pop()
+    if (title) {
+      this.placeholder.next(this.route.url.split('/').pop())
+    } else {
+      this.placeholder.next(this.standardPlaceholder.value)
+    }
   }
 }
