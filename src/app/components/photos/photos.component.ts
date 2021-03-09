@@ -45,8 +45,8 @@ export class PhotosComponent implements OnInit {
                     const value = source.title
                     if (!this.tags.includes(value)) {
                       this.tags.push(value)
-                      return value
                     }
+                    return value
                   }
                 }),
 
