@@ -44,3 +44,13 @@ input {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+.home {
+  left: 1%;
+  width: 5vh;
+  height: 5vh;
+  min-width: 1vh;
+  min-height: 1vh;
+  cursor: pointer;
+  position: fixed;
+}

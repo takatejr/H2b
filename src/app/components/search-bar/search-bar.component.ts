@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map, startWith, tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { SearchBarService } from 'src/app/services/search-bar/search-bar.service';
-
+import {autocompleteWords} from 'src/app/autocompleteWords';
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
@@ -12,18 +12,17 @@ import { SearchBarService } from 'src/app/services/search-bar/search-bar.service
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchBarComponent implements OnInit {
-
+  aaad: string[] = []
   constructor(private route: Router, private searchService: SearchBarService) {
   }
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three', "island", "whatever", "basket", "football"];
+  options: string[] = autocompleteWords
   emptyOptions: string[] = ['Not found']
   filteredOptions$: Observable<string[]>;
   placeholder = this.searchService.placeholder.value
 
   selectValue(value: string) {
-    // this.route.navigateByUrl(`/photos/${value}`, { replaceUrl: true })
     this.redirectTo(value)
     this.searchService.placeholder.next(value)
 

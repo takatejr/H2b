@@ -1,4 +1,31 @@
-<form class="search-bar" [ngClass]="placeholder !== '' ? 'moreCircle' : 'circle'">
+
+<form
+  class="search-bar"
+  [ngClass]="placeholder !== '' ? 'moreCircle' : 'circle'"
+>
+<div class="home" routerLink="/" class="home">
+  <svg
+    version="1.1"
+    id="_x31_0"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 512 512"
+    xml:space="preserve"
+  >
+    <style type="text/css">
+      .st0 {
+        fill: #374149;
+      }
+    </style>
+    <g>
+      <path
+        class="st0"
+        d="M256,0C114.614,0,0,114.614,0,256c0,141.383,114.614,256,256,256c141.383,0,256-114.617,256-256   C512,114.614,397.383,0,256,0z M256,103.004l38.582,38.91l27.57,27.965v-0.164l0.161,0.164v-34.126h33.839v68.25l24.332,24.535   L397.641,246h-47.219v130.754v0.238h-68.222V320.23h-52.398v56.75v0.011h-68.222V246H133.59l-19.281-0.114l140.91-142.094   L256,103.004z"
+      />
+    </g>
+  </svg>
+</div>
+
   <mat-form-field class="form-container" type="button">
     <div class="input_with_icon">
       <div class="imgc" (click)="selectValue(myControl.value)">
