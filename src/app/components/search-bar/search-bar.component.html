@@ -1,0 +1,30 @@
+<form class="search-bar" [ngClass]="placeholder !== '' ? 'moreCircle' : 'circle'">
+  <mat-form-field class="form-container" type="button">
+    <div class="input_with_icon">
+      <div class="imgc" (click)="selectValue(myControl.value)">
+        <img class="icon_search" src="../../../assets/search.svg" />
+      </div>
+      <mat-label></mat-label>
+      <input
+        [ngClass]="placeholder !== '' ? 'moreCircle' : 'circle'"
+        type="text"
+        placeholder="{{ placeholder }}"
+        aria-label="text"
+        matInput
+        (keydown.enter)="$event.preventDefault(); selectValue(myControl.value)"
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+      />
+    </div>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions$ | async"
+        (click)="selectValue(option)"
+        [value]="option"
+        disabled="{{ option === 'Not found' ? true : false }}"
+      >
+        <div>{{ option }}</div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

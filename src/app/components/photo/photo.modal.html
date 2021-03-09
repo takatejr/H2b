@@ -1,0 +1,26 @@
+<div>
+  <div class="author">
+    <div>
+      <img
+        style="border-radius: 50%"
+        src="{{data.photo.user.image}}"
+        alt="avatar"
+      />
+    </div>
+    <div style="display: grid">
+      <span>{{data.photo.user.name}}</span>
+      <span style="font-size: 14px"
+        >{{data.photo.created_at.split("T")[0]}}</span
+      >
+    </div>
+  </div>
+
+  <div class="container-modal">
+    <img
+      class="photo-modal"
+      src="{{data.photo.urls.regular}}"
+      alt="{{data.photo.alt_description}}"
+    />
+  </div>
+  <span style="margin: 1%">{{data.photo.alt_description}}</span>
+</div>

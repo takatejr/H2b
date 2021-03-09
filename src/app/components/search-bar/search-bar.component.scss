@@ -1,0 +1,46 @@
+.search-bar {
+  width: 70vw;
+  margin: 1% auto;
+  background-color: whitesmoke;
+}
+
+.circle {
+  border-radius: 5px 5px;
+}
+
+.moreCircle {
+  border-radius: 25px 25px;
+}
+
+.form-container,
+.mat-autocomplete-trigger {
+  height: 5vh;
+  width: 95%;
+  background-color: whitesmoke;
+}
+
+.input_with_icon {
+  display: flex;
+}
+
+.icon_search {
+  width: 2.5vh;
+  height: 2.5vh;
+  min-width: 1vh;
+  min-height: 1vh;
+}
+
+.imgc {
+  width: 5%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,0 +1,48 @@
+.photos {
+  width: 70vw;
+  min-width: 7vw;
+  margin: auto;
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+.photoProps {
+  display: grid;
+  row-gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.title {
+  width: 70vw;
+  display: flex;
+  margin: auto;
+}
+
+.snacks {
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% auto;
+  gap: 0 2%;
+}
+
+.snack {
+  padding: 10px;
+  margin: 1%;
+  border: 1px solid black;
+  border-radius: 5px 5px;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 1020px) {
+  .photos {
+    display: block;
+  }
+
+  .snacks {
+    display: none;
+  }
+}
