@@ -12,7 +12,6 @@ import {autocompleteWords} from 'src/app/autocompleteWords';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchBarComponent implements OnInit {
-  aaad: string[] = []
   constructor(private route: Router, private searchService: SearchBarService) {
   }
 
@@ -23,8 +22,10 @@ export class SearchBarComponent implements OnInit {
   placeholder = this.searchService.placeholder.value
 
   selectValue(value: string) {
-    this.redirectTo(value)
-    this.searchService.placeholder.next(value)
+    if (value) {
+      this.redirectTo(value)
+      this.searchService.placeholder.next(value)
+    }
   }
 
   setPlaceholder() {

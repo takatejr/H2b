@@ -9,7 +9,6 @@ export class HomeComponent implements OnInit {
   selectedTitle = ''
 
   changeTitle(title: string) {
-    console.log(title)
     this.selectedTitle = title
   }
   constructor() { }
